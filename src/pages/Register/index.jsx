@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -24,72 +25,80 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h1>Register Page</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-        </div>
+    <Container>
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <h1 className="text-center mb-4">Register Page</h1>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label htmlFor="firstName">First Name</Form.Label>
+              <Form.Control
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
 
-        <div>
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
-        </div>
+            <Form.Group className="mb-3">
+              <Form.Label htmlFor="lastName">Last Name</Form.Label>
+              <Form.Control
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
 
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+            <Form.Group className="mb-3">
+              <Form.Label htmlFor="email">Email</Form.Label>
+              <Form.Control
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
 
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
+            <Form.Group className="mb-3">
+              <Form.Label htmlFor="password">Password</Form.Label>
+              <Form.Control
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
 
-        <div>
-          <label htmlFor="confirmPassword">Confirm Password:</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
-        </div>
+            <Form.Group className="mb-3">
+              <Form.Label htmlFor="confirmPassword">
+                Confirm Password
+              </Form.Label>
+              <Form.Control
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
 
-        <button type="submit">Register</button>
-      </form>
-    </div>
+            <Button variant="primary" type="submit" className="w-100">
+              Register
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
