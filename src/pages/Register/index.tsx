@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { RegisterFormData } from './types';
 
 const Register = () => {
   const {
@@ -7,7 +8,7 @@ const Register = () => {
     handleSubmit,
     watch,
     formState: { errors, isSubmitting },
-  } = useForm({
+  } = useForm<RegisterFormData>({
     mode: 'onChange',
     defaultValues: {
       firstName: '',
@@ -20,7 +21,7 @@ const Register = () => {
 
   const password = watch('password');
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: RegisterFormData) => {
     try {
       // Handle form submission here
       console.log('Form submitted:', data);
