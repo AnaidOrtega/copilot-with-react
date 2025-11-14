@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "composite": true,
-    "tsc": "ES2022",
+    "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.js"]
+  "include": ["vite.config.ts"]
 }
