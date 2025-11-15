@@ -67,7 +67,7 @@ export const formConfig = [
     type: 'password',
     id: 'confirmPassword',
     validation: {
-      required: 'Confirm password is required',
+      required: 'Please confirm your password',
       validate: (value: string, formData: RegisterFormData) =>
         value === formData.password || 'Passwords do not match',
     },
