@@ -1,15 +1,5 @@
 import { Form } from 'react-bootstrap';
-import { UseFormRegisterReturn } from 'react-hook-form';
-
-interface FormInputProps {
-  id: string;
-  type: string;
-  label: string;
-  error?: string;
-  className?: string;
-  isInvalid: boolean;
-  registerConfig: UseFormRegisterReturn;
-}
+import { FormInputProps } from '.';
 
 const FormInput = ({
   id,

@@ -1,3 +1,3 @@
-import FormInput from './FormInput';
-
-export { FormInput };
+export * from './FormInput';
+export * from './TableData';
+export * from './TablePagination';

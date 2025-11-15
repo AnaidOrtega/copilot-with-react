@@ -1,5 +1,5 @@
 import { FieldErrors } from 'react-hook-form';
-import { RegisterFormData } from './types';
+import { RegisterFormData } from '.';
 
 export const formConfig = [
   {

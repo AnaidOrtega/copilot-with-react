@@ -1,4 +1,3 @@
-import Home from './Home';
-import Register from './Register';
-
-export { Home, Register };
+export * from './Register';
+export * from './Employees';
+export * from './Home';

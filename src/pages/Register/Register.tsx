@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { RegisterFormData } from './types';
-import { FormInput } from '../../components/molecules';
+import { RegisterFormData } from './Register.types';
+import { FormInput } from '../../components';
 import { formConfig } from './formConfig';
 
 const Register = () => {
