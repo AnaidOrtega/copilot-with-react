@@ -1,16 +1,6 @@
 import { Container } from 'react-bootstrap';
-import {
-  TableData,
-  TableDataProps,
-  TablePagination,
-  TablePaginationProps,
-} from '../../molecules';
-
-interface TableProps<T> {
-  className?: string;
-  tableData: TableDataProps<T>;
-  tablePaginationConfig: TablePaginationProps;
-}
+import { TableData, TablePagination } from '../../molecules';
+import { TableProps } from '.';
 
 const Table = <T extends { id: string | number }>({
   tableData,
